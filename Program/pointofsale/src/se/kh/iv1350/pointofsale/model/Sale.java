@@ -118,7 +118,7 @@ public class Sale {
         {
             addNewItemToSale(itemDTO);
         }
-        else{
+        else if (itemDTO.getName() != null){
             addSameItemToSale(itemDTO);
         }
     }
@@ -192,9 +192,9 @@ public class Sale {
      */
     private void addOneToTheRightItem(ItemDTO itemDTO)
     {
-        if (itemDTO.getName().equals("Pringles"))
+        if (itemDTO.getName() == ("Pringles"))
             amountOfPringles++;
-        else if (itemDTO.getName().equals("Meatball"))
+        else if (itemDTO.getName() == ("Meatball"))
             amountOfMeatballs++;
     }
 
@@ -235,9 +235,9 @@ public class Sale {
 
     private void addOneToTheRightItemInReceipt(ItemDTO itemDTO)
     {
-        if (itemDTO.getName().equals("Pringles"))
+        if (itemDTO.getName() == ("Pringles"))
             receipt.addPringlesAmount();
-        if (itemDTO.getName().equals("Meatball"))
+        if (itemDTO.getName() == ("Meatball"))
             receipt.addMeatballAmount();
     }
 }
